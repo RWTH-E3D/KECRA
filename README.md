@@ -11,4 +11,4 @@ Instruction → Plan Sub-tasks → Confirm Tasks → Generate Poses → Confirm 
 
 This repository includes code for perception (SAM/CLIP API), state-graph agent (LangGraph), human-AI interaction logic, and knowledge-graph construction/retrieval.
 
-Please cite:
+Please cite us if you use the codes: Tang, R., Lorenz, C. L., Frisch, J., van Treeck, C. 2025. Knowledge-Enhanced Cobot Reasoning Assistant for Robot Manipulation. Forum Bauinformatik. Aachen, Germany.
