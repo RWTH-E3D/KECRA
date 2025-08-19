@@ -1,0 +1,48 @@
+.header-container {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #2a4d6d 0%, #1b2f43 60%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title-container h6 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+}
+
+.title-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.title-link:hover {
+    color: #a8d0e6; /* Lighter blue for hover effect */
+}
+
+.logo-container .logo {
+    height: 40px; /* Slightly larger for better visibility */
+    transition: transform 0.3s ease;
+}
+
+.logo-container .logo:hover {
+    transform: scale(1.1); /* Slightly scale up the logo on hover */
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .title-container {
+        padding-bottom: 0.5rem;
+    }
+    .logo-container .logo {
+        align-self: center;
+        height: 35px;
+    }
+}

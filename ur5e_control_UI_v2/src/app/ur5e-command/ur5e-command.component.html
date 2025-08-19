@@ -1,0 +1,87 @@
+<nav aria-label="breadcrumb" class="navbar glass">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item d-flex align-items-center gap-1">
+      <i class="bi bi-house-door-fill"></i>
+      <a routerLink="/" class="link">Home</a>
+    </li>
+    <li class="breadcrumb-item active text-white" aria-current="page">
+      UR5e‑Command
+    </li>
+  </ol>
+</nav>
+
+<div class="container-fluid py-4">
+  <div class="row gy-4">
+    <!-- Chatbot column -->
+    <div class="col-lg-7">
+      <div class="card glass h-100 shadow-sm">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span class="title">LangGraph Chatbot</span>
+          <button class="btn neon-outline btn-sm" (click)="forkConversation()">
+            <i class="bi bi-git-branch pe-1"></i>Fork
+          </button>
+        </div>
+
+        <div class="card-body d-flex flex-column chat-window">
+          <ng-container *ngFor="let msg of messages">
+            <!-- User bubble → right -->
+            <div *ngIf="msg.type === 'human'" class="bubble-group justify-content-end">
+              <div class="bubble user">{{ msg.content }}</div>
+            </div>
+
+            <!-- AI bubble → left -->
+            <div *ngIf="msg.type === 'ai'" class="bubble-group justify-content-start">
+              <div class="bubble ai">{{ msg.content }}</div>
+            </div>
+          </ng-container>
+        </div>
+
+        <div class="card-footer p-3">
+          <form (submit)="sendMessage()" class="d-flex gap-3">
+            <input
+              [(ngModel)]="inputMessage"
+              name="chatInput"
+              type="text"
+              class="form-control glass-input flex-grow-1"
+              placeholder="Ask something..."
+              required
+            />
+            <button class="btn neon-fill" style="min-width: 110px;" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Robot command column -->
+    <div class="col-lg-5">
+      <div class="card glass mb-4 shadow-sm">
+        <div class="card-header"><span class="title">Detection Objects Names</span></div>
+        <div class="card-body d-flex flex-column gap-4">
+          <div class="input-group">
+            <input
+              type="text"
+              [(ngModel)]="classNames"
+              placeholder="Enter class name   eg. name1, name2"
+              class="form-control glass-input"
+            />
+            <button (click)="sendClassNames()" class="btn neon-fill" style="width: 160px">
+              Publish
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Response log -->
+      <div class="card glass shadow-sm">
+        <div class="card-header"><span class="title">Detection Process Log</span></div>
+        <div class="card-body log-output p-3">
+          <ul class="list-group list-unstyled mb-0">
+            <li *ngFor="let response of commandResponseLog" class="mb-2">
+              <pre class="log-entry" [innerHTML]="formatLog(response)"></pre>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

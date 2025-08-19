@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+/* ===== Root Vars ===== */
+:root {
+  --bg-gradient: radial-gradient(circle at 25% 25%, #001b33, #00080f 60%);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --primary: #00eaff;
+  --text-light: #e0e0e0;
+  --scrollbar-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Global ===== */
+body {
+  background: var(--bg-gradient) fixed;
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+}

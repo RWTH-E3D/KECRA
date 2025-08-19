@@ -1,0 +1,34 @@
+.navbar {
+  background: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px 60px !important;
+}
+
+.breadcrumb {
+  background: transparent;
+  margin-bottom: 0;
+}
+
+.breadcrumb-item a {
+  color: #638ca6;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #333;
+}
+
+.breadcrumb i {
+  color: #638ca6;
+}
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: #638ca6;
+}

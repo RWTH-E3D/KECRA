@@ -1,0 +1,32 @@
+<nav aria-label="breadcrumb" class="navbar">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <i class="bi bi-house-door" style="padding-right: 10px"></i>
+      <a routerLink="/" class="text-black">Home</a>
+    </li>
+    <li class="breadcrumb-item text-black active" aria-current="page">
+      UR5e-Visual
+    </li>
+  </ol>
+</nav>
+
+<div class="ur5e-visual">
+  <h2>UR5e Robot Visualization and Manual Control</h2>
+
+  <div *ngIf="jointStates">
+    <h3>Joint States</h3>
+    <ul>
+      <li *ngFor="let joint of jointStates">
+        {{ joint.name }}: {{ joint.position }} rad
+      </li>
+    </ul>
+  </div>
+
+  <h3>Manual Control</h3>
+  <div *ngFor="let joint of joints; let i = index">
+    <label>{{ joint }} Position (rad):</label>
+    <input [(ngModel)]="jointPositions[i]" type="number" step="0.1" />
+  </div>
+
+  <!-- <button (click)="sendJointCommand()">Send Joint Command</button> -->
+</div>

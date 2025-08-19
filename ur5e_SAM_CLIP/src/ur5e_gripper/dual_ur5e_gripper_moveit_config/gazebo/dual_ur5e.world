@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <name>table1</name>
+      <uri>model://table</uri>
+      <pose>0 0 0 0 0 1.570796</pose>
+    </include>
+    <include>
+      <name>table2</name>
+      <uri>model://table</uri>
+      <pose>0.8 0 0 0 0 1.570796</pose>
+    </include>
+
+    <include>
+      <name>obj1</name>
+      <uri>model://wood_cube_5cm</uri>
+      <pose>0.3 0.1 1.1 0 0 0.2</pose>
+    </include>
+    <include>
+      <name>obj2</name>
+      <uri>model://wood_cube_5cm</uri>
+      <pose>0.2 -0.2 1.1 0 0 -0.10</pose>
+    </include>
+
+    <include>
+      <name>brick_cube_1</name>
+      <uri>model://dual_ur5e_gripper_moveit_config/gazebo/brick_cube</uri>
+      <pose>0.5 0.2 1.1 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>brick_cube_2</name>
+      <uri>model://dual_ur5e_gripper_moveit_config/gazebo/brick_cube</uri>
+      <pose>0.5 -0.2 1.1 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>red_cube</name>
+      <uri>model://dual_ur5e_gripper_moveit_config/gazebo/red_cube</uri>
+      <pose>0.8 -0.5 1.1 0 0 0.1</pose>
+    </include>
+
+    <include>
+      <name>green_cube</name>
+      <uri>model://dual_ur5e_gripper_moveit_config/gazebo/green_cube</uri>
+      <pose>0.7 0.5 1.1 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>red_box</name>
+      <uri>model://dual_ur5e_gripper_moveit_config/gazebo/red_box</uri>
+      <pose>0.66 0.1 1.1 0 0 -0.2</pose>
+    </include>
+
+    <include>
+      <name>blue_box</name>
+      <uri>model://dual_ur5e_gripper_moveit_config/gazebo/blue_box</uri>
+      <pose>0.66 0.1 1.5 0 0 -0.2</pose>
+    </include>
+
+    <include>
+      <name>turquoise_box</name>
+      <uri>model://dual_ur5e_gripper_moveit_config/gazebo/turquoise_box</uri>
+      <pose>0.77 -0.1 1.1 0 0 0</pose>
+    </include>
+
+  </world>
+</sdf>
