@@ -27,6 +27,8 @@ It creates a WebSocket interface that allows the Angular frontend to communicate
 cd ur5e_control_UI_v2
 ng serve
 ```
+By default, the chatbot UI will be available at http://localhost:4200.
+Through this interface, users can enter natural language instructions, which are forwarded to the backend Agent. The Agent processes them and coordinates with the ROS2 system, enabling interactive dialogue-based control of the robot.
 ### 3. Run backend Agent
 ```bash
 cd dual_arms_manipulation_agent_v1
