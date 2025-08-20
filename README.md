@@ -25,4 +25,20 @@ ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 cd ur5e_control_UI_v2
 ng serve
 ```
+### 3. Run backend Agent
+```bash
+cd dual_arms_manipulation_agent_v1
+uvicorn main:app --reload
+```
+### 4. Launch Gazebo simulation
+```bash
+cd ur5e_SAM_CLIP
+ros2 launch bringup simulation.launch.py
+ros2 launch ur5e_gripper_control demo4.launch.py
+```
+### 5. Build knowledge graph
+```bash
+python neo4j_generation.py
+```
+
 
