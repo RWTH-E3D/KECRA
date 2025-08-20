@@ -51,7 +51,7 @@ python neo4j_generation.py
 Each time a task is completed, run this script to export the interaction records from the SQLite dialogue database into the Neo4j graph database, thereby enriching the knowledge graph.
 ⚠️ Note: before each run, make sure to update the current dialogue thread number in the script so that the correct interaction history is imported.
 ## Demonstration
-[▶️ Watch the demonstration](./demonstration.mp4)
+[▶️[Watch the video](./demo_thumbnail.png)](./demonstration.mp4)
 
 
 
