@@ -22,7 +22,7 @@ ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 This command launches the ROS2 Rosbridge WebSocket server.
 It creates a WebSocket interface that allows the Angular frontend to communicate with the ROS2 nodes, enabling JSON-based message exchange between the web UI and the robot.
 
-### 2. Start Angular frontend
+### 2. Start Angular15 frontend
 ```bash
 cd ur5e_control_UI_v2
 ng serve
@@ -34,6 +34,7 @@ Through this interface, users can enter natural language instructions, which are
 cd dual_arms_manipulation_agent_v1
 uvicorn main:app --reload
 ```
+This step starts the backend Agent service using FastAPI, exposing HTTP APIs built on LangGraph.
 ### 4. Launch Gazebo simulation
 ```bash
 cd ur5e_SAM_CLIP
