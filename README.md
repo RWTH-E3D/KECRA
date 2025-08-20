@@ -19,6 +19,8 @@ Please cite us if you use the codes: Tang, R., Lorenz, C. L., Frisch, J., van Tr
 ```bash
 ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 ```
+This command launches the ROS2 Rosbridge WebSocket server.
+It creates a WebSocket interface that allows the Angular frontend to communicate with the ROS2 nodes, enabling JSON-based message exchange between the web UI and the robot.
 
 ### 2. Start Angular frontend
 ```bash
