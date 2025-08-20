@@ -53,6 +53,11 @@ Each time a task is completed, run this script to export the interaction records
 ## Demonstration
 [![▶️ Watch the video](./demo.png)](./demonstration.mp4)
 Click the image to download and watch the demonstration video!
+## Acknowledgment
+- [Segment Anything (SAM)](https://github.com/facebookresearch/segment-anything.git)  
+- [CLIP](https://github.com/openai/CLIP.git)
+- [UR5e_Vision_Assemble](https://github.com/zitongbai/UR5e_Vision_Assemble.git)
+- [LangGraph](https://github.com/langchain-ai/langgraph.git)
 
 
 
