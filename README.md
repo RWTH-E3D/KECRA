@@ -17,3 +17,8 @@ Please cite us if you use the codes: Tang, R., Lorenz, C. L., Frisch, J., van Tr
 ### 1. Start ROS2 Rosbridge WebSocket
 ```bash
 ros2 launch rosbridge_server rosbridge_websocket_launch.xml
+### 2. Start Angular frontend
+```bash
+cd ur5e_control_UI_v2
+ng serve
+
