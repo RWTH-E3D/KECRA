@@ -13,6 +13,10 @@ This repository includes code for perception (SAM/CLIP API), state-graph agent (
 
 Please cite us if you use the codes: Tang, R., Lorenz, C. L., Frisch, J., van Treeck, C. 2025. Knowledge-Enhanced Cobot Reasoning Assistant for Robot Manipulation. Forum Bauinformatik. Aachen, Germany.
 
+
+https://github.com/user-attachments/assets/0a23391e-8dd9-43fa-a5cb-bf49ba1f9954
+
+
 ## Installation
 
 ### 1. Start ROS2 Rosbridge WebSocket
