@@ -41,6 +41,9 @@ cd ur5e_SAM_CLIP
 ros2 launch bringup simulation.launch.py
 ros2 launch ur5e_gripper_control demo4.launch.py
 ```
+This step launches the Gazebo simulation environment with dual UR5e robotic arms for manipulation tasks.
+The vision detection module is based on SAM + CLIP for zero-shot object recognition and pose estimation.
+For detailed Gazebo environment setup and configuration, please refer to: [UR5e_Vision_Assemble](https://github.com/zitongbai/UR5e_Vision_Assemble.git).
 ### 5. Build knowledge graph
 ```bash
 python neo4j_generation.py
