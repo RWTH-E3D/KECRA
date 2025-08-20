@@ -52,7 +52,7 @@ Each time a task is completed, run this script to export the interaction records
 ⚠️ Note: before each run, make sure to update the current dialogue thread number in the script so that the correct interaction history is imported.
 ## Demonstration
 [![▶️ Watch the video](./demo.png)](./demonstration.mp4)
-Click the image to download and watch the demonstration video.
+Click the image to download and watch the demonstration video!
 
 
 
