@@ -31,12 +31,18 @@ ng serve
 ```
 By default, the chatbot UI will be available at http://localhost:4200.
 Through this interface, users can enter natural language instructions, which are forwarded to the backend Agent. The Agent processes them and coordinates with the ROS2 system, enabling interactive dialogue-based control of the robot.
+
+![frontend overview](assets/demo.png)
+
 ### 3. Run backend Agent
 ```bash
 cd dual_arms_manipulation_agent_v1
 uvicorn main:app --reload
 ```
 This step starts the backend Agent service using FastAPI, exposing HTTP APIs built on LangGraph.
+
+![agent overview](assets/agent.png)
+
 ### 4. Launch Gazebo simulation
 ```bash
 cd ur5e_SAM_CLIP
@@ -46,15 +52,22 @@ ros2 launch ur5e_gripper_control demo4.launch.py
 This step launches the Gazebo simulation environment with dual UR5e robotic arms for manipulation tasks.
 The vision detection module is based on SAM + CLIP for zero-shot object recognition and pose estimation.
 For detailed Gazebo environment setup and configuration, please refer to: [UR5e_Vision_Assemble](https://github.com/zitongbai/UR5e_Vision_Assemble.git).
+
+![perception overview](assets/perception.png)
+
 ### 5. Build knowledge graph
 ```bash
 python neo4j_generation.py
 ```
 Each time a task is completed, run this script to export the interaction records from the SQLite dialogue database into the Neo4j graph database, thereby enriching the knowledge graph.
 ⚠️ Note: before each run, make sure to update the current dialogue thread number in the script so that the correct interaction history is imported.
+
+![memory overview](assets/memory.png)
+
 ## Demonstration
-[![▶️ Watch the video](./demo.png)](./demonstration.mp4)
-Click the image to download and watch the demonstration video!
+![demo overview](assets/demonstration.gif)
+
+
 ## Acknowledgment
 - [Segment Anything (SAM)](https://github.com/facebookresearch/segment-anything.git)  
 - [CLIP](https://github.com/openai/CLIP.git)
