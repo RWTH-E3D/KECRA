@@ -1,4 +1,4 @@
-# KECRA
+# KECRA (Knowledge-Enhanced Cobot Reasoning Assistant)
 KECRA is a framework for language-based control of collaborative robots (cobots) in dynamic construction environments. It combines Large Language Models (LLMs) with Visual Foundation Models (VFMs) to allow human operators to guide robotic assistance through natural language dialogues.
 KECRA integrates:
   - Perception module based on SAM + CLIP, providing zero-shot recognition and real-time understanding of objects (type, location, physical dimensions, coordinate frame).
